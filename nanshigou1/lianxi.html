@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			jQuery($ => {
+				//主页初始化
+				ajax('get', 'api/q1.php', "", function(str) {
+					console.log(JSON.parse(str));
+				});
+
+				function render(str) {
+					var arr = JSON.parse(str);
+					console.log(arr);
+					var s = arr.map(function(item) { //map方法返回的是个数组，用join方法把它变成可以用来渲染的字符串
+						return `<li>
+						<div class="goodsimg">
+							<a href="#" class="clearfix"><img src="img/${item.img}"></a>
+							<span class="clearfix"><i>今日</i></span>
+						</div>
+						<div class="goodsname">
+							<a href="#">${item.goodName}</a>
+						</div>
+						<div class="goodsprice">
+							<span><em></em>￥${item.shopprice}</span>
+							<a href="#">去下单</a>
+						</div>
+					</li>`;
+					}).join('');
+					$('ul').html(s);
+				}
+			});
+		</script>
+	</head>
+
+	<body>
+		<ul>
+
+		</ul>
+	</body>
+
+</html>

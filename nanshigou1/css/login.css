@@ -1,0 +1,332 @@
+@charset "UTF-8";
+#loginheader {
+  width: 100%;
+  height: 82px;
+  background: white; }
+  #loginheader .loginheader {
+    width: 1200px;
+    margin: 0 auto; }
+    #loginheader .loginheader div {
+      float: left; }
+    #loginheader .loginheader .headerleft {
+      margin-top: 10px;
+      margin-right: 15px; }
+    #loginheader .loginheader .headermiddle {
+      border-color: #ffb4a8;
+      background-color: #fef2f2;
+      color: #6C6C6C;
+      margin-top: 27px; }
+      #loginheader .loginheader .headermiddle p {
+        margin: 0;
+        padding: 6px 10px;
+        color: #6C6C6C;
+        line-height: 16px;
+        overflow: hidden;
+        width: 820px;
+        text-align: center;
+        font-size: 10px;
+        border: 1px solid indianred; }
+    #loginheader .loginheader .headerright {
+      float: right; }
+      #loginheader .loginheader .headerright a {
+        color: #fff;
+        line-height: 82px;
+        height: 82px;
+        background-color: #2f97f0;
+        padding: 6px 20px;
+        font-size: 14px;
+        border-radius: 3px;
+        text-decoration: none; }
+
+body {
+  background: #FAFAFA; }
+
+#login {
+  display: block;
+  margin: 0 auto;
+  width: 480px;
+  height: 530px;
+  margin: 20px auto;
+  z-index: 1; }
+  #login .login {
+    background-color: #FFF;
+    width: 480px;
+    padding: 19px 19px 29px 19px;
+    border: solid 1px #E6E6E6;
+    border-radius: 5px;
+    float: right;
+    position: relative;
+    z-index: 1;
+    height: 520px; }
+    #login .login .loginway {
+      width: 440px;
+      height: 40px; }
+      #login .login .loginway p {
+        margin: 0;
+        font-size: 18px;
+        color: #999;
+        line-height: 24px;
+        display: block;
+        width: 220px;
+        height: 37px;
+        float: left;
+        text-align: center; }
+    #login .login .loginactive {
+      color: #2f97f0;
+      display: block;
+      border-bottom: 3px solid #2f97f0; }
+    #login .login #phonelogin {
+      display: none; }
+    #login .login .logintran1 {
+      transform: rotateY(0deg); }
+    #login .login .logintran2 {
+      transition: all 1s;
+      transform: rotateY(90deg); }
+    #login .login .logincontent {
+      margin-top: 40px;
+      padding: 0 40px 20px 40px;
+      position: absolute; }
+      #login .login .logincontent .sendcode {
+        margin-top: 5px;
+        font-size: 12px; }
+        #login .login .logincontent .sendcode input {
+          line-height: 22px;
+          color: #FFF;
+          background-color: #21b384;
+          vertical-align: middle;
+          display: inline-block;
+          height: 22px;
+          padding: 0 8px;
+          margin: 0 4px;
+          border-radius: 2px; }
+        #login .login .logincontent .sendcode input:hover {
+          background-color: #1FA67A; }
+      #login .login .logincontent .inputactive {
+        border: 1px solid #21B384; }
+      #login .login .logincontent div {
+        width: 352px;
+        height: 54px;
+        border: 1px solid #ccc;
+        line-height: 54px;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 20px; }
+        #login .login .logincontent div input {
+          border: none;
+          height: 30px;
+          width: 250px; }
+        #login .login .logincontent div span {
+          margin: 0;
+          float: right;
+          width: 120px;
+          height: 52px;
+          font-size: 30px;
+          line-height: 52px;
+          border-left: 1px solid #ccc; }
+      #login .login .logincontent .codein input {
+        width: 150px; }
+      #login .login .logincontent span {
+        font: 12px/20px "Hiragino Sans GB", "Microsoft Yahei", arial, 宋体, "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+        color: #999; }
+      #login .login .logincontent .abandon {
+        color: #333;
+        text-decoration: none;
+        outline: medium none;
+        font-size: 12px;
+        float: right;
+        margin-top: 15px; }
+      #login .login .logincontent #logincookies {
+        margin-top: 15px; }
+      #login .login .logincontent .dlbutton {
+        width: 348px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #FFF;
+        background-color: #2f97f0;
+        height: 42px;
+        border: solid 1px #2f97f0;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-top: 15px; }
+    #login .login .loginfooter {
+      width: 340px;
+      margin: 0 auto;
+      height: 62px;
+      position: absolute;
+      bottom: 15px;
+      left: 80px; }
+      #login .login .loginfooter h4 {
+        font-size: 12px;
+        margin-bottom: 10px; }
+      #login .login .loginfooter a {
+        margin-right: 20px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #AAA;
+        vertical-align: top;
+        display: inline-block;
+        height: 32px;
+        margin-right: 24px; }
+        #login .login .loginfooter a i {
+          background: url(../img/login_pic.png) no-repeat;
+          vertical-align: middle;
+          display: inline-block;
+          width: 32px;
+          height: 32px;
+          margin-right: 6px; }
+        #login .login .loginfooter a .xinlang {
+          background-position: -32px 0; }
+
+#register {
+  display: block;
+  margin: 0 auto;
+  width: 860px;
+  height: 560px;
+  margin: 60px auto;
+  z-index: 1; }
+  #register .register {
+    background-color: #FFF;
+    width: 860px;
+    padding: 19px 19px 29px 19px;
+    border: solid 1px #E6E6E6;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    height: 560px; }
+    #register .register .registerleft {
+      float: left;
+      width: 600px;
+      height: 520px;
+      border-right: 1px solid #E6E6E6; }
+      #register .register .registerleft p {
+        margin: 0;
+        font-size: 18px;
+        color: #999;
+        line-height: 24px;
+        display: block;
+        width: 580px;
+        height: 40px;
+        float: left;
+        text-align: center; }
+      #register .register .registerleft .registeractive {
+        color: #2f97f0;
+        display: block;
+        border-bottom: 3px solid #2f97f0; }
+      #register .register .registerleft .registercontent {
+        margin-top: 100px;
+        width: 580px; }
+        #register .register .registerleft .registercontent .sendcode {
+          width: 400px;
+          margin: 20px 90px 20px 90px;
+          font-size: 12px;
+          color: #999; }
+          #register .register .registerleft .registercontent .sendcode input {
+            line-height: 22px;
+            color: #FFF;
+            background-color: #21b384;
+            vertical-align: middle;
+            display: inline-block;
+            height: 22px;
+            padding: 0 8px;
+            margin: 0 4px;
+            border-radius: 2px; }
+          #register .register .registerleft .registercontent .sendcode input:hover {
+            background-color: #1FA67A; }
+        #register .register .registerleft .registercontent .inputactive {
+          border: 1px solid #21B384; }
+        #register .register .registerleft .registercontent div {
+          width: 400px;
+          height: 54px;
+          border: 1px solid #ccc;
+          line-height: 54px;
+          text-align: center;
+          font-size: 14px;
+          margin: 0 auto;
+          margin-top: 20px; }
+          #register .register .registerleft .registercontent div input {
+            border: none;
+            height: 30px;
+            width: 250px; }
+          #register .register .registerleft .registercontent div span {
+            margin: 0;
+            float: right;
+            width: 120px;
+            height: 52px;
+            background: red; }
+        #register .register .registerleft .registercontent .codein input {
+          width: 150px; }
+        #register .register .registerleft .registercontent span {
+          font: 12px/20px "Hiragino Sans GB", "Microsoft Yahei", arial, 宋体, "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+          color: #999; }
+        #register .register .registerleft .registercontent .buttonnext {
+          margin: 20px 120px 20px 120px;
+          width: 348px;
+          font-size: 16px;
+          font-weight: 600;
+          color: #FFF;
+          background-color: #2f97f0;
+          height: 42px;
+          border: solid 1px #2f97f0;
+          border-radius: 3px;
+          cursor: pointer;
+          margin-top: 15px; }
+      #register .register .registerleft #registernext {
+        display: none; }
+    #register .register .registerright {
+      float: left;
+      width: 220px;
+      height: 520px; }
+      #register .register .registerright .h4head {
+        padding-left: 10px;
+        margin-left: 15px;
+        border-bottom: 1px dashed #ccc;
+        height: 100px; }
+        #register .register .registerright .h4head h4 {
+          font-size: 12px;
+          margin-bottom: 20px; }
+        #register .register .registerright .h4head a {
+          font-size: 12px;
+          text-decoration: none;
+          color: #AAA;
+          vertical-align: top;
+          display: inline-block;
+          height: 32px;
+          margin-left: 10px; }
+          #register .register .registerright .h4head a i {
+            background: url(../img/login_pic.png) no-repeat;
+            vertical-align: middle;
+            display: inline-block;
+            width: 42px;
+            height: 42px;
+            margin-right: 6px;
+            background-position: -126px -32px; }
+          #register .register .registerright .h4head a .xinlang {
+            background-position: -168px -32px; }
+      #register .register .registerright .olfoot {
+        padding-left: 20px; }
+        #register .register .registerright .olfoot li {
+          margin-left: 30px;
+          margin-bottom: 15px;
+          font-size: 14px;
+          color: #666; }
+          #register .register .registerright .olfoot li i {
+            background: url(../img/login_pic.png) no-repeat;
+            vertical-align: middle;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 8px; }
+          #register .register .registerright .olfoot li .ico01 {
+            background-position: 0px -76px; }
+          #register .register .registerright .olfoot li .ico02 {
+            background-position: -30px -76px; }
+          #register .register .registerright .olfoot li .ico03 {
+            background-position: -60px -76px; }
+          #register .register .registerright .olfoot li .ico04 {
+            background-position: -90px -76px; }
+          #register .register .registerright .olfoot li .ico05 {
+            background-position: -120px -76px; }
+          #register .register .registerright .olfoot li .ico06 {
+            background-position: -150px -76px; }
+
+/*# sourceMappingURL=login.css.map */

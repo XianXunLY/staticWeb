@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html <head>
+	<meta charset="UTF-8">
+	<title>详情</title>
+	<link rel="stylesheet" type="text/css" href="../css/base.css" />
+	<link rel="stylesheet" type="text/css" href="../css/index.css" />
+	<link rel="stylesheet" type="text/css" href="../css/bottom.css" />
+	<link rel="stylesheet" type="text/css" href="../css/details.css" />
+	<script src="../js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/input.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/tools.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/details.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/scaleimg.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/assess.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<!--欢迎栏-->
+		<div id="wrapper" class="con">
+			<div class="wrapper">您好，欢迎来到潮男购物网站！
+				<ul class="indexyoukeactive">
+					<li>
+						<a>请登录</a>
+					</li>
+					<li>
+						<a>免费注册</a>
+					</li>
+					<li>
+						<a href="#">用QQ账号登录</a>
+					</li>
+					<li>
+						<a href="#">用微博账号登录</a>
+					</li>
+				</ul>
+				<div class="indexloginactive">
+					您好
+					<a href="#" id="user_name">u3117<i>V0</i></a>
+					<a href="#">我的订单</a>
+					<a href="#">待付款订单</a>
+					<a href="#">待确认收货</a>
+					<a href="#">待评价交易</a>
+					<a href="#">我的收藏</a>
+					<a id="loginexit">[退出]</a>
+				</div>
+			</div>
+		</div>
+
+		<!--logo-->
+		<div id="logo" class="con">
+			<div class="logo">
+				<div class="logo_img1">
+					<img src="../img/05923582196171529.png" />
+				</div>
+				<div class="logo_img2">
+					<img src="../img/05048168915006375.gif" />
+				</div>
+				<div class="logo_search">
+					<div class="logo_input">
+						<ul id="logo_ul1" style="float: left;">
+							<li>商品<i class="currenti"></i></li>
+							<li>店铺<i></i></li>
+						</ul>
+						<input type="text" id="inp1" placeholder="搜“型男”试试，新品上线，快来拔草" /><input type="button" id="inp2" value="搜索" />
+					</div>
+					<div class="logo_redu">
+						<p>热门搜索:</p>
+						<ul id="logo_ul2">
+							<li>潮男</li>
+							<li>外套</li>
+							<li>七分裤</li>
+							<li>t恤</li>
+							<li>衬衫</li>
+							<li>香水</li>
+							<li>帆布鞋</li>
+							<li>运动休闲</li>
+						</ul>
+					</div>
+				</div>
+				<div class="logo_person">
+					<dl>
+						<dt><span class="span1"></span>会员中心<i></i></dt>
+						<dd class="logo_huiyuan logo_con">
+							<div class="sub-title">
+								<a class="arrow">进入会员中心<i></i></a>
+							</div>
+							<div class="user-centent-menu">
+								<ul>
+									<li class="liborder">
+										<a>站内消息(<span>0</span>)</a>
+									</li>
+									<li>
+										<a class="arrow">我的订单<i></i></a>
+									</li>
+									<li class="liborder">
+										<a>咨询回复(<span id="member_consult">0</span>)</a>
+									</li>
+									<li>
+										<a class="arrow">我的收藏<i></i></a>
+									</li>
+									<li class="liborder">
+										<a>代金券(<span id="member_voucher">0</span>)</a>
+									</li>
+									<li>
+										<a class="arrow">我的积分<i></i></a>
+									</li>
+								</ul>
+							</div>
+							<div class="browse-history">
+								<div class="part-title">
+									<h5>最近浏览的商品</h5>
+									<span style="float:right;"><a>全部浏览历史</a></span>
+								</div>
+								<ul>
+									<li class="no-goods">暂无商品</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl style="width: 133px;">
+						<dt><span class="span2"></span>我的购物车<i></i></dt>
+						<dd class="logo_shopcar logo_con">
+							<div class="sub-title">
+								<h4>最新加入的商品</h4>
+							</div>
+							<div class="incart-goods-box">
+								<div class="incart-goods">你的购物车上暂无商品<i></i>赶紧选择心爱的商品吧</div>
+							</div>
+							<div class="checkout"> <span class="total-price"><i></i></span>
+								<a class="btn-cart" id="btn-cart">结算购物车中的商品</a>
+							</div>
+
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<!--nav-->
+		<div id="nav">
+			<div class="nav">
+				<p><i></i>
+					<a>所有分类</a>
+				</p>
+				<ul>
+					<li>
+						<a>首页</a>
+					</li>
+					<li>
+						<a>潮款服装</a>
+					</li>
+					<li>
+						<a>时尚鞋靴</a>
+					</li>
+					<li>
+						<a>护肤美妆</a>
+					</li>
+					<li>
+						<a>精选套装</a>
+					</li>
+					<li>
+						<a>时尚T恤</a>
+					</li>
+					<li>
+						<a>防晒衣</a>
+					</li>
+					<li>
+						<a>POLO衫</a>
+					</li>
+					<li>
+						<a>悠闲鞋</a>
+					</li>
+					<li>
+						<a>百搭七分裤</a>
+					</li>
+				</ul>
+				<p class="nav_p1"><span></span>
+					<a>下载APP</a><i></i></p>
+			</div>
+		</div>
+
+		<div id="details">
+			<div class="details">
+				<p class='detailsTittle'><i></i>
+					<a href="../index.html">首页</a><span></span></p>
+				<div class="detailsGoods">
+					<div class="detailsGoodsleft detailsdivcon">
+						<div class="detailsimgtop" id="detailsimgall">
+							<div id="imgself">
+								<img class="detailsimg1" src="../img/39_05977681498246100_360.jpg" />
+								<div class="scalebox" id="scalebox"></div>
+							</div>
+							<img class="detailsimg2" src="../img/39_05977681498246100_60.jpg" />
+							<div class="scaleimgbox" id="scaleimgbox">
+								<div class="scaleimg" id="movebox">
+									<img src="../img/39_05977681498246100_360.jpg" />
+								</div>
+								<p>鼠标滚轮向上或向下滚动，能放大或缩小图片哦~</p>
+							</div>
+						</div>
+						<div class="detailsimgbotom">
+							<a>分享(<i id="joinnum">0</i>)</a>
+							<a>收藏商品(<i id="collectnum">0</i>)</a>
+							<a><input type="checkbox" />加入对比</a>
+							<a style="margin-left: 80px;">举报</a>
+						</div>
+					</div>
+					<div class="detailsGoodsmiddle detailsdivcon">
+						<div class="goodsname">
+							<h1 id="h1goodname">冬季胖子加厚棉衣男士加肥大码面包服韩版百搭棉袄外套个性潮男装 黑色 S</h1>
+						</div>
+						<div class="goodsprice" id="goodsprice">
+							<p><span>市场价：</span><em>¥218.00</em></p>
+							<p><span>商场价：</span><strong>¥178.00</strong></p>
+							<p><span>商品评价：</span><span><img src=""/></span>
+								<a>共有<i>0</i>条评价</a>
+							</p>
+							<div class="goodsimgcode">
+								<dd><img src="../img/226982.png" /></dd>
+								<dt>客户端扫购有惊喜</dt>
+							</div>
+						</div>
+						<div class="sendinfo">
+							<dl>
+								<dt class="sendbd">配  送  至：</dt>
+								<dd class="sendbd">
+									<div class="sendaddress"></div>
+									<strong class="">有货</strong><span>免运费</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>颜  色：</dt>
+								<dd>
+									<a class="goodscolor"><img src="../img/39_05977681498246100_60.jpg" />黑色</a>
+									<a class="goodscolor"><img src="../img/39_05977681498246100_60.jpg" />黄色</a>
+									<a class="goodscolor"><img src="../img/39_05977681498246100_60.jpg" />白色</a>
+									<a class="goodscolor"><img src="../img/39_05977681498246100_60.jpg" />绿色</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>尺  码：</dt>
+								<dd>
+									<a class="goodssize">S</a>
+									<a class="goodssize">M</a>
+									<a class="goodssize">L</a>
+									<a class="goodssize">XL</a>
+									<a class="goodssize">2XL</a>
+									<a class="goodssize">3XL</a>
+									<a class="goodssize">4XL</a>
+								</dd>
+							</dl>
+						</div>
+						<div class="buyinfo">
+							<div class="buynumber">
+								<input type="text" name="" id="quantity" value="1" />
+								<a class="increase" id="detailsincrease"><i></i></a>
+								<a class="decrease" id="detailsdecrease"><i></i></a>
+							</div>
+							<div class="goodsaddshopcar">
+								<p>
+									<a class="addgoods" id="detailsaddgoods"><i></i>加入购物车</a>
+								</p>
+								<p style="background-color: #BA7538;">
+									<a class="buygoods" id="detailsbuy">立即购买</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="detailsGoodsright detailsdivcon">
+						<h3 class="storename" id="detailsstorename">好男孩潮品铺</h3>
+						<div class="storeinfo">
+							<p>综合评分：<span></span><em>4.6</em>分</p>
+							<h5><strong>店铺动态评分</strong>与行业相比</h5>
+							<ul>
+								<li>描述相符<em>4.6</em>分</li>
+								<li>服务态度<em>4.4</em>分</li>
+								<li style="border-bottom: 1px dashed #ccc;">发货速度<em>4.8</em>分</li>
+							</ul>
+							<p>联系方式：<span></span></p>
+							<p>公司名称：<em></em></p>
+							<p>所 在 地 ：<em></em></p>
+							<p>电　　话： <em>下载男士购app联系客服</em></p>
+							<p>
+								<a href="#">进入商家店铺</a>
+								<a href="#">收藏店铺</a>
+							</p>
+							<ol>
+								<li style="margin-right: 2px;"><i></i>店铺地图</li>
+								<li><i style="background-position:-100px -160px;"></i>店铺二维码</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="goodslink">
+					<ul id="goodlinkul">
+						<li class="goodslinkactive" style="border-left: none;">商品详情</li>
+						<li>商品评价(<i>0</i>)</li>
+						<li>销售记录(<i>1</i>)</li>
+						<li>购买咨询</li>
+					</ul>
+					<p class="goodslinkp"></p>
+				</div>
+
+				<div class="linkgoodsbrand" id="linkgoodsbrand">
+					<img src="../img/goodsbrand.png" />
+					<img src="../img/o1cn01rbn8nk1pdojmaeyjr_!!2636225327.jpg" />
+					<img src="../img/o1cn01kob1tl1pdojolp02a_!!2636225327.jpg" />
+				</div>
+
+				<div class="linkgoodsassess" id="linkgoodsassess">
+					<div class="assesssum">
+						<p style="border-bottom: 1px solid #ccc;">
+							<a>商品评价</a>
+						</p>
+						<div class="assessleft">
+							<p><span><strong>100%</strong>好评</span>共有<i>0</i>人参与评分</p>
+						</div>
+						<div class="assessmiddle">
+							<p>好评（<em>100%</em>）<strong><i></i></strong></p>
+							<p>中评（<em>0%</em>）<strong><i></i></strong></p>
+							<p>差评（<em>0%</em>）<strong><i></i></strong></p>
+						</div>
+						<div class="assessright">
+							<p>你可对已购商品评价</p>
+							<a id="assessrightbtn">评价商品</a>
+						</div>
+					</div>
+					<div class="assessdetails">
+						<ul id="assessdetailsul">
+							<li class="assessdetailsactive" style="border-left: 1px solid #ccc;">商品评价</li>
+							<li>好评<i></i></li>
+							<li>中评<i></i></li>
+							<li>差评</li>
+						</ul>
+						<p class="goodslinkp">暂无符合条件的相关数据</p>
+					</div>
+				</div>
+
+				<div class="linkgoodsrecord" id="linkgoodsrecord">
+					<p style="border-bottom: 1px solid #ccc;">
+						<a href="#">销售记录</a>
+					</p>
+				</div>
+
+				<div class="linkgoodsconsult" id="linkgoodsconsult">
+					<p style="border-bottom: 1px solid #ccc;">
+						<a href="#">购买咨询</a>
+					</p>
+					<div class="consultdetails">
+						<ul id="consultdetailsul">
+							<li class="consultdetailsactive">全部</li>
+							<li>商品咨询<i></i></li>
+							<li>支付问题<i></i></li>
+							<li>发票与保修</li>
+							<li>促销与赠品</li>
+						</ul>
+						<p class="goodslinkp"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--保障bz-->
+		<div class="bzbox">
+			<div class="bz">
+				<img src="../img/nsgfoot_bz.png" />
+			</div>
+		</div>
+
+		<!--bottom-->
+		<div class="bottombox">
+			<div class="bottom">
+				<div class="bottom-box-left">
+					<div class="bottom-app-code"></div>
+					<p>男士购客服</p>
+					<p>添加微信号</p>
+				</div>
+				<div class="bottom-box-center">
+					<ul>
+						<li>
+							<h3>新手指南</h3>
+							<a href="#" target="_blank">找回密码</a>
+							<a href="#" target="_blank">注册账号</a>
+							<a href="#" target="_blank">交易条款</a>
+						</li>
+						<li>
+							<h3>支付配送</h3>
+							<a href="#" target="_blank">网上支付</a>
+							<a href="#" target="_blank">配送运费</a>
+							<a href="#" target="_blank">配送方式</a>
+						</li>
+						<li>
+							<h3>售后服务</h3>
+							<a href="#" target="_blank">售后政策</a>
+							<a href="#" target="_blank">售后流程</a>
+							<a href="#" target="_blank">售后申请</a>
+						</li>
+						<li>
+							<h3>关于我们</h3>
+							<a href="#" target="_blank">公司介绍</a>
+							<a href="#" target="_blank">隐私声明</a>
+							<a href="#" target="_blank">招贤纳士</a>
+						</li>
+					</ul>
+				</div>
+				<div class="bottom-box-right">
+					<div class="link">
+						<h3>联系我们</h3>
+						<p class="p1">客服微信：gebuzaishuai</p>
+						<p class="p2">工作日：9:00-20:00</p>
+						<div>
+							<span class="">意见反馈</span>
+						</div>
+					</div>
+					<div class="attention">
+						<h3>关注我们</h3>
+						<div class="weiXin" title="男士购微信">
+						</div>
+						<div class="weiBo" title="男士购微博">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--foot-->
+		<div class="footbox">
+			<div class="foot">
+				<p class="footlink">
+					<a>友情链接：</a>
+					<a href="#" target="_blank" title="男士平台">男士平台</a>
+					<a href="#" target="_blank" title="男士购APP">男士购APP</a>
+					<a href="#" target="_blank" title="男士穿搭">男士穿搭</a>
+					<a href="#" target="_blank" title="男士购APP升级">男士购APP升级</a>
+					<a href="#" target="_blank" title="男士购APP2.6版本下载">男士购APP2.6版</a>
+					<a href="#" target="_blank" title="男士购使用教程">男士购使用教程</a>
+					<a href="#" target="_blank" title="男士购物平台">男士购物平台</a>
+					<a href="#" target="_blank" title="潮男服装搭配">潮男服装搭配</a>
+				</p>
+				<p class="footcopy">Copyright © 2010-2018 男士购 版权所有
+					<a target="_blank" rel="nofollow" href="#">桂ICP备15008077号-1</a>&nbsp;&nbsp;
+				</p>
+			</div>
+		</div>
+
+		<!--工具栏-->
+		<div id="tools">
+			<div class="opentools">
+				<div class="user toolscon">
+					<div class="imgdiv"><img src="../img/default_user_portrait.gif" /></div>
+					<p id="showloginbox">未登录</p>
+				</div>
+				<div class="shopcar toolscon">
+					<div class="imgcar imgdiv"><i id="shopcarnumtip"></i></div>
+					<p>购物车</p>
+				</div>
+				<div class="back toolscon">
+					<div class="imgback imgdiv"></div>
+					<p id="backtop">顶部</p>
+				</div>
+				<div class="close toolscon">
+					<div class="imgclose imgdiv"></div>
+				</div>
+			</div>
+			<div class="closetools">
+				<div class="userbox">
+					<img src="../img/default_user_portrait.gif" />
+					<div class="bgbox"></div>
+				</div>
+			</div>
+			<div id="carbox">
+				<div class="cartop">
+					<h3>我的购物车</h3>
+					<p id="toolclosecarshop"></p>
+				</div>
+				<div id="carcontent">
+					<ul>
+						<!--<li>
+							<img src="../img/39_05977681498246100_60.jpg" />
+							<div>
+								<a class="toolgoodsname">名字</a>
+								<p><span id="shopcargoodprice">¥178.00</span> X <i>1</i></p>
+								<a class="toolgoodsdelete" title="删除">X</a>
+							</div>
+						</li>-->
+					</ul>
+					<div class="carcontentbottom">
+						<p>共计金额：<span id="tooltotalprice">¥0.00</span></p>
+						<a id="toolgoodsaccount">结算购物车中的商品</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="userinfbox">
+				<div class="userinfimg">
+					<img src="../img/default_user_portrait.gif" />
+					<div class="userinfimgbg"></div>
+				</div>
+				<div class="userinfdetails">
+					<p class="infousername">Hi,<span>u3117</span></p>
+					<p>当前等级：<span>V0</span></p>
+					<p>当前经验值：<span>1</span></p>
+				</div>
+			</div>
+
+			<div id="loginbox">
+				<div class="user-login-box" nctype="barLoginBox">
+					<i class="arrow"></i>
+					<p class="closeinput">X</p>
+					<form id="login_form">
+						<dl>
+							<dt><strong>登录名</strong></dt>
+							<dd>
+								<input type="text" name="user_name" id="toolusername" autofocus>
+								<label></label>
+							</dd>
+						</dl>
+						<dl>
+							<dt><strong>登录密码</strong><a href="#" target="_blank">忘记登录密码？</a></dt>
+							<dd>
+								<input type="password" name="password" id="toolpassword">
+								<label></label>
+							</dd>
+						</dl>
+						<dl>
+							<dt><strong>验证码</strong><a href="#">更换验证码</a></dt>
+							<dd>
+								<input type="text" class="code" id="toolinputcode" maxlength="4" />
+								<p class="showcode" id="toolshowcode"></p>
+								<label></label>
+							</dd>
+						</dl>
+						<div class="formbottom">
+							<input type="button" class="submit" id="toolsubmit" value="确认">
+							<input type="hidden" value="" name="ref_url">
+							<a href="html/login.html">注册新用户</a>
+							<a class="mr20" title="新浪微博账号登录" href="#">新浪微博</a>
+							<a class="mr20" title="QQ账号登录" href="#">QQ账号</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

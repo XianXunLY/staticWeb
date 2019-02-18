@@ -1,0 +1,407 @@
+    #searchContent {
+        width: 100%;
+        .searchContent {
+            width: 1200px;
+            margin: 0 auto;
+            line-height: 40px;
+            font-size: 10px;
+            .searchTittle {
+                i {
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    background: url(../img/shouye.png) 0 3px no-repeat;
+                }
+                a {
+                    margin-left: 5px;
+                    color: #777;
+                }
+                a:hover {
+                    color: deepskyblue;
+                    text-decoration: underline;
+                }
+                span {
+                    margin-left: 5px;
+                    color: #ccc;
+                }
+            }
+            .searchGoods {
+                .commendGoods {
+                    margin-bottom: 10px;
+                    height: 143px;
+                    border: 1px solid #ccc;
+                    border-top: solid 2px #2f97f0;
+                    h3 {
+                        font: normal 14px/20px "microsoft yahei";
+                        color: #333;
+                        height: 36px;
+                        padding: 8px 10px;
+                        background-color: #f5f4f4;
+                        ;
+                    }
+                    ul {
+                        li {
+                            padding: 7px;
+                            width: 244px;
+                            height: 104px;
+                            float: left;
+                            .commendimg {
+                                width: 90px;
+                                height: 90px;
+                                float: left;
+                                img {
+                                    width: 90px;
+                                    height: 90px;
+                                }
+                            }
+                            .commendinfo {
+                                position: relative;
+                                margin-left: 10px;
+                                float: left;
+                                width: 130px;
+                                height: 90px;
+                                dt {
+                                    margin: 0;
+                                    width: 130px;
+                                    height: 32px;
+                                    display: inline-block;
+                                    overflow: hidden;
+                                    a {
+                                        display: block;
+                                        width: 125px;
+                                        height: 32px;
+                                        color: #777;
+                                        line-height: 16px;
+                                        margin: 0 auto;
+                                    }
+                                    a:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                                dd {
+                                    position: absolute;
+                                    top: 32px;
+                                    left: 0px;
+                                    margin: 5px auto;
+                                    width: 130px;
+                                    height: 20px;
+                                    display: inline-block;
+                                    a {
+                                        color: #555;
+                                    }
+                                    line-height: 20px;
+                                    white-space: nowrap;
+                                    span {
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        color: #ff3c00;
+                                    }
+                                }
+                                .qianggou {
+                                    display: inline-block;
+                                    width: 65px;
+                                    height: 26px;
+                                    background: red;
+                                    text-align: center;
+                                    line-height: 26px;
+                                    color: white;
+                                    border-radius: 3px;
+                                    margin: 0 15px;
+                                    position: absolute;
+                                    bottom: 0;
+                                }
+                                .qianggou:hover {
+                                    background: #2f97f0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .contentGoods {
+                    height: 820px;
+                    nav {
+                        background: #F7F7F7;
+                        display: block;
+                        height: 36px;
+                        border: solid 1px #D7D7D7;
+                        margin-bottom: 10px;
+                        .paixu {
+                            padding: 0 0 0 10px;
+                            vertical-align: top;
+                            height: 36px;
+                            width: 500px;
+                            line-height: 36px;
+                            margin: 0;
+                            float: left;
+                            p {
+                                float: left;
+                            }
+                            ul {
+                                display: inline-block;
+                                li {
+                                    float: left;
+                                    line-height: 20px;
+                                    color: #555;
+                                    height: 35px;
+                                    padding: 8px 13px 8px 12px;
+                                    border-left: 1px solid #ccc;
+                                    i {
+                                        background: url(../img/2014shop_background_img.png) no-repeat 0 -11px;
+                                        display: inline-block;
+                                        width: 7px;
+                                        height: 8px;
+                                        margin-left: 4px;
+                                    }
+                                    input {
+                                        width: 42px;
+                                        height: 24px;
+                                        border: 1px solid #ccc;
+                                        margin-right: 7px;
+                                    }
+                                }
+                                li:hover {
+                                    color: lightblue;
+                                    background: white;
+                                }
+                                .paixuactive {
+                                    color: lightblue;
+                                    background: white;
+                                }
+                            }
+                        }
+                        .goodstoggle {
+                            float: right;
+                            width: 108px;
+                            height: 35px;
+                            span {
+                                border: 1px solid #ccc;
+                                padding: 2px 6px;
+                                color: #005AA0;
+                            }
+                            span:hover {
+                                background-color: #005AA0;
+                                color: white;
+                            }
+                            .goodstop {
+                                color: #AAA;
+                            }
+                        }
+                        .goodscheckbox {
+                            height: 35px;
+                            float: left;
+                            input {
+                                margin-left: 10px;
+                            }
+                        }
+                        .goodsaddressbox {
+                            height: 35px;
+                            float: left;
+                            margin-left: 100px;
+                            .goodsaddress {
+                                height: 35px;
+                                .alladdress {
+                                    float: right;
+                                    height: 35px;
+                                    width: 100px;
+                                    span {
+                                        background: white;
+                                        padding: 2px 5px 2px 4px;
+                                        border: 1px solid #ccc;
+                                        i {
+                                            display: inline-block;
+                                            width: 8px;
+                                            height: 8px;
+                                            margin-left: 3px;
+                                            border: 4px solid;
+                                            border-color: #666 #F7F7F7 #F7F7F7 #F7F7F7;
+                                            transition: .2s ease-in;
+                                        }
+                                    }
+                                    span:hover i {
+                                        transform: rotateZ(180deg);
+                                        border-color: #666 #fff #fff #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .goodscontent {
+                        ul {
+                            position: relative;
+                            width: 1200px;
+                            overflow: hidden;
+                            li {
+                                box-sizing: content-box;
+                                display: inline-block;
+                                font-size: 12px;
+                                vertical-align: top;
+                                letter-spacing: normal;
+                                word-spacing: normal;
+                                display: inline-block;
+                                line-height: 18px;
+                                background-color: #FFF;
+                                width: 294px;
+                                height: 370px;
+                                border: solid 1px #F0F0F0;
+                                border-radius: 2px;
+                                box-shadow: 0 0 3px rgba(153, 153, 153, 0.1);
+                                transition: all 0.3s ease-in-out 0s;
+                                overflow: hidden;
+                                padding: 2px;
+                                .goodscontentimg {
+                                    width: 300px;
+                                    height: 225px;
+                                    padding: 5px 40px;
+                                    img {
+                                        width: 220px;
+                                        height: 220px;
+                                    }
+                                }
+                                .goodscontenttext {
+                                    width: 300px;
+                                    height: 265px;
+                                    padding: 0px 2px 0 0;
+                                    top: 230px;
+                                    transition: transform .5s linear;
+                                    img {
+                                        width: 28px;
+                                        height: 28px;
+                                    }
+                                    .p1 {
+                                        background: white;
+                                    }
+                                    .p2 {
+                                        margin-top: 10px;
+                                        a:hover{
+                                            color: #00BFFF;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                    .p3 {
+                                        height: 30px;
+                                        line-height: 30px;
+                                        margin-top: 5px;
+                                        .em1 {
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                            text-overflow: ellipsis;
+                                            white-space: nowrap;
+                                            max-width: 70px;
+                                            float: left;
+                                            overflow: hidden;
+                                            color: #C00;
+                                        }
+                                        .em2 {
+                                            font-size: 14px;
+                                            text-decoration: line-through;
+                                            text-overflow: ellipsis;
+                                            white-space: nowrap;
+                                            max-width: 70px;
+                                            float: left;
+                                            overflow: hidden;
+                                            color: #999;
+                                            margin-left: 10px;
+                                        }
+                                    }
+                                    .p4 {
+                                        text-align: right;
+                                        height: 35px;
+                                        line-height: 35px;
+                                        margin-bottom: 5px;
+                                        span {
+                                            border: 1px solid #ccc;
+                                            padding: 3px 5px;
+                                        }
+                                    }
+                                    .p5 {
+                                        width: 203px;
+                                        height: 46px;
+                                        margin: 2px 50px;
+                                        border-top: 1px solid #ccc;
+                                        span {
+                                            display: inline-block;
+                                            width: 65px;
+                                            border-right: 1px solid #ccc;
+                                            text-align: center;
+                                            color: #777;
+                                            i {
+                                                display: block;
+                                                margin: 3px 0;
+                                                color: lightblue;
+                                            }
+                                        }
+                                    }
+                                    .p6 {
+                                        background: #EAEAEA;
+                                        height: 40px;
+                                        line-height: 40px;
+                                        text-align: center;
+                                    }
+                                    #addshopcar {
+                                        width: 100%;
+                                        height: 35px;
+                                        background: #2f97f0;
+                                    }
+                                }
+                            }
+                            .litranslatey {
+                                transform: translateY(-100px);
+                            }
+                            li:hover .goodscontenttext {
+                                transform: translateY(-20px);
+                            }
+                            li:hover {
+                                height: 478px;
+                                z-index: 2019;
+                                padding: 0px;
+                                border: 2px solid cornflowerblue;
+                            }
+                        }
+                    }
+                }
+                .goodpage {
+                    text-align: center;
+                    display: block;
+                    margin: 0 auto;
+                    padding: 15px 0;
+                    vertical-align: top;
+                    text-align: center !important;
+                    #goodspageul {
+                        text-align: center !important;
+                        height: 38px;
+                        margin: 0 auto;
+                        li {
+                            display: inline-block;
+                            height: 38px;
+                            vertical-align: top;
+                            letter-spacing: normal;
+                            word-spacing: normal;
+                            span {
+                                font: 600 12px/20px Verdana, Tahoma, Arial;
+                                color: #AAA;
+                                background-color: #FFF;
+                                text-align: center;
+                                display: block;
+                                min-width: 20px;
+                                padding: 8px;
+                                border: 1px solid #E6E6E6
+                            }
+                            .clickable{
+                                color: #555;
+                            }
+                        }
+                        .pagefirstli{
+                            margin-right: 10px;
+                        }
+                        .pagelastli{
+                            margin-left: 10px;
+                        }
+                        .pagesli{
+                            width: 38px;
+                            height: 38px;
+                        }
+                    }
+                }
+            }
+        }
+    }
