@@ -71,6 +71,7 @@ jQuery($ => {
 						<div class="goodscontentimg">
 							<img src="../img/${item.img}" />
 						</div>
+						<div class="borderbox"></div>
 						<div class="goodscontenttext">
 							<p class="p1"><img src="../img/${item.img}" /></p>
 							<p class="p2"><a>${item.goodname}</a></p>

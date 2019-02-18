@@ -239,7 +239,7 @@ jQuery($ => {
 							<td class="storemoney"">${item.price*item.num}</td>
 							<td class="borderright">
 								<a>收藏</a>
-								<a>删除</a>
+								<a class="gooddelete">删除</a>
 							</td>
 						</tr>`;
 					if(index == arrnums - 1) {

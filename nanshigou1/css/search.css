@@ -191,17 +191,17 @@
           vertical-align: top;
           letter-spacing: normal;
           word-spacing: normal;
-          display: inline-block;
+          float: left;
           line-height: 18px;
           background-color: #FFF;
           width: 294px;
           height: 370px;
-          border: solid 1px #F0F0F0;
+          border: solid 3px #F0F0F0;
           border-radius: 2px;
           box-shadow: 0 0 3px rgba(153, 153, 153, 0.1);
           transition: all 0.3s ease-in-out 0s;
-          overflow: hidden;
-          padding: 2px; }
+          position: relative;
+          z-index: 3; }
           #searchContent .searchContent .searchGoods .contentGoods .goodscontent ul li .goodscontentimg {
             width: 300px;
             height: 225px;
@@ -210,11 +210,11 @@
               width: 220px;
               height: 220px; }
           #searchContent .searchContent .searchGoods .contentGoods .goodscontent ul li .goodscontenttext {
-            width: 300px;
+            width: 294px;
             height: 265px;
             padding: 0px 2px 0 0;
-            top: 230px;
-            transition: transform .5s linear; }
+            transition: transform .5s linear;
+            background: white; }
             #searchContent .searchContent .searchGoods .contentGoods .goodscontent ul li .goodscontenttext img {
               width: 28px;
               height: 28px; }
@@ -283,12 +283,17 @@
         #searchContent .searchContent .searchGoods .contentGoods .goodscontent ul .litranslatey {
           transform: translateY(-100px); }
         #searchContent .searchContent .searchGoods .contentGoods .goodscontent ul li:hover .goodscontenttext {
+          background: papayawhip;
+          margin-left: 1px;
+          position: absolute;
+          z-index: 2010;
           transform: translateY(-20px); }
+        #searchContent .searchContent .searchGoods .contentGoods .goodscontent ul li:hover .p1 {
+          background: papayawhip; }
         #searchContent .searchContent .searchGoods .contentGoods .goodscontent ul li:hover {
-          height: 478px;
+          background: papayawhip;
           z-index: 2019;
-          padding: 0px;
-          border: 2px solid cornflowerblue; }
+          border: 3px solid white; }
     #searchContent .searchContent .searchGoods .goodpage {
       text-align: center;
       display: block;

@@ -252,7 +252,9 @@ body {
             float: right;
             width: 120px;
             height: 52px;
-            background: red; }
+            font-size: 26px;
+            line-height: 52px;
+            border-left: 1px solid #ccc; }
         #register .register .registerleft .registercontent .codein input {
           width: 150px; }
         #register .register .registerleft .registercontent span {
