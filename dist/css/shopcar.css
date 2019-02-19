@@ -1,0 +1,192 @@
+#logo .buystep {
+  float: right; }
+  #logo .buystep li {
+    float: left;
+    width: 160px;
+    height: 70px;
+    position: relative;
+    background: #fff; }
+    #logo .buystep li .buystep1 {
+      background: url(../img/tollsbor_new.png) no-repeat;
+      background-position: -3px -75px;
+      width: 30px;
+      height: 30px;
+      border-radius: 3px;
+      position: absolute;
+      left: 65px;
+      margin: 0;
+      background-color: #efefef; }
+    #logo .buystep li p {
+      font-size: 12px;
+      color: #CCC;
+      text-align: center;
+      width: 100%;
+      height: 24px;
+      line-height: 24px;
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      bottom: 0;
+      overflow: hidden; }
+    #logo .buystep li .stepborder {
+      width: 100%;
+      height: 1px;
+      border-top: 1px solid #ddd;
+      position: absolute;
+      z-index: 1;
+      top: 40px;
+      left: 0;
+      text-align: center;
+      line-height: 0px;
+      margin: 0; }
+      #logo .buystep li .stepborder span {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        position: relative;
+        top: -4px;
+        background-color: #FFF;
+        margin-left: -3px;
+        border: solid 1px #CCC;
+        border-radius: 4px;
+        z-index: 2; }
+      #logo .buystep li .stepborder .stepspanactive {
+        background-color: #27A9E3;
+        border-color: #27A9E3;
+        box-shadow: 0 0 0 2px rgba(0, 153, 204, 0.15); }
+    #logo .buystep li .stepactive {
+      color: #27A9E3;
+      border-color: #27A9E3; }
+
+#myshopcar {
+  width: 100%; }
+  #myshopcar .myshopcar {
+    width: 1200px;
+    margin: 0 auto; }
+    #myshopcar .myshopcar .shopcartitle {
+      height: 80px;
+      padding: 15px 0;
+      border-top: 1px solid #F7F7F7; }
+      #myshopcar .myshopcar .shopcartitle h3 {
+        font: lighter 24px/30px arial, "microsoft yahei";
+        color: #555; }
+      #myshopcar .myshopcar .shopcartitle h5 {
+        font: 12px/20px arial, "microsoft yahei";
+        color: #AAA; }
+    #myshopcar .myshopcar table {
+      border-collapse: collapse;
+      border-style: solid;
+      border-width: 2px 1px;
+      border-color: #AAA #DDD;
+      margin-bottom: 20px; }
+      #myshopcar .myshopcar table input,
+      #myshopcar .myshopcar table th,
+      #myshopcar .myshopcar table a,
+      #myshopcar .myshopcar table td {
+        font: 12px/20px Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        border: none; }
+      #myshopcar .myshopcar table thead tr th {
+        line-height: 20px;
+        color: #666;
+        background-color: #F9F9F9;
+        text-align: center;
+        height: 20px;
+        width: 120px;
+        padding: 8px 0;
+        border-bottom: solid 1px #DDD; }
+      #myshopcar .myshopcar table thead tr .w50 {
+        width: 50px !important; }
+      #myshopcar .myshopcar table thead tr .w60 {
+        width: 60px !important; }
+      #myshopcar .myshopcar table thead tr .w80 {
+        width: 79px !important;
+        border-right: solid 1px #DDD; }
+      #myshopcar .myshopcar table thead tr .w650 {
+        width: 650px !important; }
+      #myshopcar .myshopcar table tbody tr th {
+        font-size: 12px;
+        line-height: 20px;
+        color: #333;
+        height: 20px;
+        background-color: #DAF0FE;
+        padding: 8px;
+        border-bottom: solid 1px #DDD; }
+        #myshopcar .myshopcar table tbody tr th a {
+          font-weight: 600; }
+      #myshopcar .myshopcar table tbody tr td {
+        background-color: #FFF;
+        padding: 8px 0;
+        text-align: center;
+        border: none;
+        border-bottom: solid 1px #DDD; }
+        #myshopcar .myshopcar table tbody tr td img {
+          width: 40px;
+          height: 40px; }
+        #myshopcar .myshopcar table tbody tr td a {
+          display: block;
+          color: #333; }
+        #myshopcar .myshopcar table tbody tr td .updatenum {
+          font: 12px/20px Tahoma;
+          color: #777;
+          background-color: #FFF;
+          vertical-align: middle;
+          display: inline-block;
+          width: 30px;
+          padding: 2px 4px;
+          border: solid 1px #CCC;
+          outline: 0 none; }
+        #myshopcar .myshopcar table tbody tr td i {
+          color: #777;
+          text-decoration: none;
+          background-color: #F5F5F5;
+          letter-spacing: normal;
+          word-spacing: normal;
+          text-align: center;
+          vertical-align: middle;
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          line-height: 10px;
+          margin: 0 4px;
+          border: solid 1px;
+          border-color: #DCDCDC #DCDCDC #B3B3B3 #DCDCDC;
+          cursor: pointer; }
+        #myshopcar .myshopcar table tbody tr td i:hover {
+          background: #49AFCD;
+          color: white;
+          border-color: #49AFCD; }
+        #myshopcar .myshopcar table tbody tr td a:hover {
+          text-decoration: underline;
+          color: brown; }
+      #myshopcar .myshopcar table tbody tr .borderright {
+        border-right: solid 1px #DDD; }
+      #myshopcar .myshopcar table tbody tr .tdtextleft {
+        text-align: left; }
+      #myshopcar .myshopcar table tbody .tbodyfoot {
+        height: 90px; }
+        #myshopcar .myshopcar table tbody .tbodyfoot th {
+          background: white; }
+      #myshopcar .myshopcar table tfoot td {
+        background: #F9F9F9;
+        text-align: right;
+        height: 50px;
+        padding: 10px 0; }
+        #myshopcar .myshopcar table tfoot td .all_account {
+          margin-right: 20px;
+          font: normal 16px/32px "microsoft yahei", Arial;
+          color: #666; }
+          #myshopcar .myshopcar table tfoot td .all_account em {
+            font-size: 22px;
+            color: #2f97f0;
+            margin: 0 5px; }
+    #myshopcar .myshopcar .nextstep {
+      text-align: right;
+      margin-bottom: 20px; }
+      #myshopcar .myshopcar .nextstep input {
+        background-color: #2F96B4;
+        border-color: #2A87A2;
+        width: 218px;
+        height: 38px;
+        color: white; }
+
+/*# sourceMappingURL=shopcar.css.map */

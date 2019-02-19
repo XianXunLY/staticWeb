@@ -1,0 +1,583 @@
+    #details {
+        width: 100%;
+        .details {
+            width: 1200px;
+            margin: 0 auto;
+            line-height: 40px;
+            font-size: 10px;
+            .detailsTittle {
+                i {
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    background: url(../img/shouye.png) 0 3px no-repeat;
+                }
+                a {
+                    margin-left: 5px;
+                    color: #777;
+                }
+                a:hover {
+                    color: deepskyblue;
+                    text-decoration: underline;
+                }
+                span {
+                    margin-left: 5px;
+                    color: #ccc;
+                }
+            }
+            .detailsGoods {
+                height: 462px;
+                border-collapse: collapse;
+                .detailsdivcon {
+                    border: 1px solid #ccc;
+                    float: left;
+                }
+                .detailsGoodsleft {
+                    width: 370px;
+                    height: 462px;
+                    .detailsimgtop {
+                        width: 370px;
+                        height: 410px;
+                        padding: 20px;
+                        position: relative;
+                        #imgself {
+                            position: relative;
+                            width: 320px;
+                            .detailsimg1 {
+                                width: 320px;
+                                height: 320px;
+                            }
+                            .scalebox {
+                                //放大镜盒子
+                                display: none;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 160px;
+                                height: 160px;
+                                cursor: move;
+                                background-color: #fff;
+                                opacity: .3;
+                            }
+                        }
+                        .detailsimg2 {
+                            width: 52px;
+                            height: 52px;
+                            margin: 10px;
+                            border: 2px solid;
+                            border-color: #2f97f0;
+                        }
+                        .scaleimgbox {
+                            //放大图片盒子
+                            display: none;
+                            width: 362px;
+                            height: 390px;
+                            position: absolute;
+                            top: 0;
+                            left: 370px;
+                            z-index: 999;
+                            box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.10);
+                            .scaleimg {
+                                width: 362px;
+                                height: 362px;
+                                z-index: 333;
+                                position: relative;
+                                top: 0px;
+                                overflow: hidden;
+                                img {
+                                    width: 724px;
+                                    height: 724px;
+                                    position: absolute;
+                                    top: -20px;
+                                    left: 0;
+                                }
+                            }
+                            p {
+                                position: absolute;
+                                top: 362px;
+                                height: 28px;
+                                width: 362px;
+                                line-height: 28px;
+                                text-align: center;
+                                font-weight: 600;
+                                background-color: #FFF7D1;
+                                color: lightcoral;
+                            }
+                        }
+                    }
+                    .detailsimgbotom {
+                        width: 350px;
+                        height: 50px;
+                        margin: 0 10px;
+                        border-top: 1px solid #EAEAEA;
+                        a {
+                            border: 1px solid #EAEAEA;
+                            padding: 2px 6px;
+                            border-radius: 2px;
+                            color: #6C6C6C;
+                        }
+                        a:hover {
+                            background: #E0E0E0;
+                        }
+                    }
+                }
+                .detailsGoodsmiddle {
+                    width: 622px;
+                    height: 462px;
+                    border-right: none;
+                    border-left: none;
+                    .goodsname {
+                        padding: 15px 20px;
+                        h1 {
+                            font: 700 16px/21px "Microsoft Yahei";
+                            color: #333;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            display: block;
+                            overflow: hidden;
+                        }
+                    }
+                    .goodsprice {
+                        width: 622px;
+                        height: 138px;
+                        padding: 15px 0;
+                        background: #DADADA url(../img/goods_meta_bg.png) no-repeat 0 50%;
+                        position: relative;
+                        z-index: 1;
+                        p {
+                            line-height: 36px;
+                            height: 36px;
+                            span {
+                                display: inline-block;
+                                width: 99px;
+                                height: 36px;
+                                text-align: right;
+                            }
+                            em {
+                                font-weight: 600;
+                                text-decoration: line-through;
+                            }
+                            strong {
+                                color: #c00;
+                                font: 700 30px/25px Tahoma;
+                                vertical-align: middle;
+                                text-shadow: 0 1px 0 #6C0900;
+                            }
+                            a {
+                                color: #666;
+                                text-decoration: underline;
+                                vertical-align: middle;
+                                display: inline-block;
+                            }
+                        }
+                        .goodsimgcode {
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                            img {
+                                width: 100px;
+                                height: 100px;
+                            }
+                            dt {
+                                height: 25px;
+                                line-height: 25px;
+                            }
+                        }
+                    }
+                    .sendinfo {
+                        padding: 0 20px;
+                        .sendbd {
+                            border-bottom: 1px dashed #ccc;
+                        }
+                        dl {
+                            margin-top: 10px;
+                        }
+                        dt {
+                            display: inline-block;
+                            width: 76px;
+                            height: 49x;
+                            text-align: right;
+                        }
+                        dd {
+                            width: 490px;
+                            height: 49x;
+                            display: inline-block;
+                            .sendaddress {
+                                width: 97px;
+                                height: 28x;
+                                display: inline-block;
+                            }
+                            strong {
+                                width: 32px;
+                                height: 21x;
+                                font-size: 16px;
+                                color: #333;
+                                margin: 0 8px;
+                            }
+                            span {
+                                color: #999;
+                            }
+                            .goodscolor {
+                                display: inline-block;
+                                margin: 5px;
+                                border: 1px solid #ccc;
+                                height: 30px;
+                                line-height: 26px;
+                                padding: 0px 2px 2px 2px;
+                                color: #000000;
+                                img {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                            }
+                            .goodssize {
+                                color: #000000;
+                                margin: 5px;
+                                border: 1px solid #ccc;
+                                padding: 5px;
+                            }
+                            a:hover {
+                                border: 2px solid #1280DD;
+                            }
+                        }
+                    }
+                    .buyinfo {
+                        width: 622px;
+                        height: 83px;
+                        margin-top: 20px;
+                        padding: 0 40px;
+                        .buynumber {
+                            width: 69px;
+                            height: 43px;
+                            float: left;
+                            input {
+                                float: left;
+                                border: 1px solid #E6E6E6;
+                                text-align: center;
+                                width: 44px;
+                                height: 44px;
+                                margin: 0;
+                                font-weight: 600;
+                            }
+                            a {
+                                margin: 0;
+                                vertical-align: top;
+                                display: block;
+                                float: left;
+                                background-color: #FFF;
+                                background: url(../images/shop/2014_ncs_public_img.png) no-repeat;
+                                width: 22px;
+                                height: 22px;
+                                border-style: solid;
+                                border-color: #E6E6E6;
+                                border-width: 1px 1px 1px 0;
+                                z-index: 1;
+                                text-align: center;
+                                line-height: 22px;
+                                position: relative;
+                                i {
+                                    display: block;
+                                    width: 4px;
+                                    height: 4px;
+                                    border: 4px solid;
+                                    border-color: #fff #fff #000 #fff;
+                                    position: absolute;
+                                    top: 4px;
+                                    left: 5px;
+                                }
+                            }
+                            .decrease {
+                                border-width: 0px 1px 1px 0;
+                                i {
+                                    border-color: #000 #fff #fff #fff;
+                                    top: 8px;
+                                }
+                            }
+                        }
+                        .goodsaddshopcar {
+                            p {
+                                background-color: #f40;
+                                padding: 4px 10px;
+                                float: left;
+                                height: 44px;
+                                margin: 0 5px;
+                                a {
+                                    color: white;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    i {
+                                        display: inline-block;
+                                        width: 22px;
+                                        height: 20px;
+                                        position: relative;
+                                        top: 4px;
+                                        background: url(../img/detialsshopcar.png) no-repeat 0 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .detailsGoodsright {
+                    width: 208px;
+                    height: 462px;
+                    .storename {
+                        background: #E0E0E0;
+                        font-weight: 600;
+                        padding-left: 10px;
+                        font-size: 14px;
+                    }
+                    .storeinfo {
+                        p {
+                            padding-left: 10px;
+                            color: #666;
+                            height: 35px;
+                            a {
+                                color: #005EA6;
+                                margin-left: 20px;
+                            }
+                            a:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                        h5,
+                        ul {
+                            padding: 0 15px;
+                            strong {
+                                margin-right: 30px;
+                            }
+                            li {
+                                height: 26px;
+                                line-height: 26px;
+                            }
+                        }
+                        ol {
+                            background: #E0E0E0;
+                            li {
+                                width: 100px;
+                                display: inline-block;
+                                text-align: center;
+                                i {
+                                    display: inline-block;
+                                    width: 16px;
+                                    height: 16px;
+                                    background: url(../img/public.png) no-repeat 0px -160px;
+                                    position: relative;
+                                    top: 3px;
+                                }
+                            }
+                            li:hover {
+                                background: white;
+                            }
+                        }
+                    }
+                }
+            }
+            .goodslink {
+                margin-top: 20px;
+                ul {
+                    box-sizing: border-box;
+                    height: 41px;
+                    border: 1px solid #ccc;
+                    li {
+                        color: #333;
+                        float: left;
+                        background-color: #FFF;
+                        padding: 0px 35px 0 35px;
+                        border-right: 1px solid #ccc;
+                    }
+                    .goodslinkactive {
+                        border-style: solid;
+                        border-color: #2f97f0 #DDD transparent #DDD;
+                        border-width: 2px 1px 0 1px;
+                    }
+                }
+                .ulfixed {
+                    position: fixed;
+                    top: 0;
+                    width: 1200px;
+                    background: white;
+                    z-index: 2019;
+                }
+                p {
+                    width: 1200px;
+                    height: 50px;
+                    border: 1px solid #ccc;
+                }
+            }
+            .linkgoodsbrand {
+                border: 1px solid #ccc;
+                margin-top: 20px;
+            }
+            .linkgoodsassess {
+                height: 300px;
+                margin-top: 20px;
+                .assesssum {
+                    border: 1px solid #ccc;
+                    height: 130px;
+                    border-width: 2px 1px 1px 1px;
+                    border-color: mediumblue #ccc #ccc #ccc;
+                    p {
+                        font: normal 14px/20px "Microsoft Yahei";
+                        text-decoration: none;
+                        color: #777;
+                        display: block;
+                        padding: 6px 15px 5px 15px;
+                        a {
+                            color: #080808;
+                        }
+                        a:hover {
+                            color: cornflowerblue;
+                            text-decoration: underline;
+                        }
+                    }
+                    div {
+                        float: left;
+                    }
+                    .assessleft {
+                        width: 200px;
+                        margin: 10px 0 0 20px;
+                        span {
+                            color: #c00;
+                            display: block;
+                            strong {
+                                font: lighter 40px/40px arial;
+                                vertical-align: bottom;
+                            }
+                        }
+                    }
+                    .assessmiddle {
+                        margin-top: 20px;
+                        padding-right: 400px;
+                        border-right: 1px dashed #ccc;
+                        p {
+                            width: 200px;
+                            height: 20px;
+                            padding: 0;
+                            em {}
+                            strong {
+                                display: inline-block;
+                                background-color: #F5F5F5;
+                                height: 14px;
+                                width: 100px;
+                                float: right;
+                                position: relative;
+                                top: 3px;
+                                i {
+                                    height: 14px;
+                                }
+                            }
+                        }
+                    }
+                    .assessright {
+                        margin-top: 20px;
+                        margin-left: 20px;
+                        p {
+                            padding: 0;
+                            font-size: 12px;
+                        }
+                        a {
+                            font: normal 14px/20px "Microsoft Yahei";
+                            color: white;
+                            background-color: brown;
+                            text-align: center;
+                            display: inline-block;
+                            height: 26px;
+                            width: 108px;
+                            padding: 4px 16px;
+                            border: solid 1px;
+                            border-color: #DCDCDC #DCDCDC #B3B3B3 #DCDCDC;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .assessdetails {
+                    border-top: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                    margin-top: 20px;
+                    height: 150px;
+                    ul {
+                        height: 40px;
+                        li {
+                            color: #333;
+                            float: left;
+                            background-color: #FFF;
+                            padding: 0px 35px 0 35px;
+                            border-right: 1px solid #ccc;
+                        }
+                        .assessdetailsactive {
+                            border-style: solid;
+                            border-color: #2f97f0 #DDD transparent #DDD;
+                            border-width: 2px 1px 0 1px;
+                        }
+                    }
+                    p {
+                        width: 1200px;
+                        height: 120px;
+                        text-align: center;
+                        line-height: 120px;
+                        color: #ccc;
+                        border: 1px solid #ccc;
+                    }
+                }
+            }
+            .linkgoodsrecord {
+                border: 1px solid #ccc;
+                margin-top: 20px;
+                height: 130px;
+                border-width: 2px 1px 1px 1px;
+                border-color: mediumblue #ccc #ccc #ccc;
+                p {
+                    font: normal 14px/20px "Microsoft Yahei";
+                    text-decoration: none;
+                    color: #777;
+                    display: block;
+                    padding: 6px 15px 5px 15px;
+                    a {
+                        color: #080808;
+                    }
+                    a:hover {
+                        color: cornflowerblue;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .linkgoodsconsult {
+                border: 1px solid #ccc;
+                height: 130px;
+                border-width: 2px 1px 1px 1px;
+                border-color: mediumblue #ccc #ccc #ccc;
+                margin-top: 20px;
+                p {
+                    font: normal 14px/20px "Microsoft Yahei";
+                    text-decoration: none;
+                    color: #777;
+                    display: block;
+                    padding: 6px 15px 5px 15px;
+                    a {
+                        color: #080808;
+                    }
+                    a:hover {
+                        color: cornflowerblue;
+                        text-decoration: underline;
+                    }
+                }
+                ul {
+                    height: 40px;
+                    li {
+                        color: #333;
+                        float: left;
+                        background-color: #FFF;
+                        padding: 0px 35px 0 35px;
+                        border-right: 1px solid #ccc;
+                        border-bottom: 1px solid #ccc;
+                    }
+                    .consultdetailsactive {
+                        border-style: solid;
+                        border-color: #2f97f0 #DDD transparent #DDD;
+                        border-width: 2px 1px 0 1px;
+                    }
+                }
+            }
+        }
+    }
