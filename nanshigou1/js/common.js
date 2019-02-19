@@ -10,7 +10,7 @@
  * @return {String} 返回值 {backgroundColor的rgb(,,)属性}
  */
 function randomColor(type) {
-	if(type === 'rgb') {
+	if (type === 'rgb') {
 		var r = parseInt(Math.random() * 256);
 		var g = parseInt(Math.random() * 256);
 		var b = parseInt(Math.random() * 256);
@@ -18,12 +18,11 @@ function randomColor(type) {
 	} else {
 		var res = '#';
 		var str = '0123456789abcdef';
-		for(var i = 0; i < 6; i++) {
+		for (var i = 0; i < 6; i++) {
 			res += str[parseInt(Math.random() * str.length)];
 		}
 		return res;
 	}
-
 }
 
 /** [随机生成任意范围的随机数]
@@ -41,7 +40,7 @@ function randomnumber(n2, n3) {
  * @return {Number } 返回值 { 所求阶乘结果}
  */
 function fac(num) {
-	if(num <= 1) {
+	if (num <= 1) {
 		return 1;
 	}
 	return num * fac(num - 1);
@@ -55,15 +54,15 @@ function swich(box, menu) {
 	var box = document.getElementById(box);
 	var menu = document.getElementById(menu);
 	var bool = true;
-	box.onclick = function() {
-		if(bool) {
+	box.onclick = function () {
+		if (bool) {
 			menu.style.display = 'block';
 			bool = !bool;
 		} else {
 			menu.style.display = 'none';
 			bool = !bool;
 		}
-	}
+	};
 }
 
 /** [下拉菜单]
@@ -71,39 +70,41 @@ function swich(box, menu) {
  * @param {string} menu { 隐藏起来的菜单}
  */
 function pullmenu(box, menu) {
-	box.onmouseover = function() {
+	box.onmouseover = function () {
 		menu.style.display = 'block';
-	}
-	box.onmouseout = function() {
+	};
+	box.onmouseout = function () {
 		menu.style.display = 'none';
-	}
+	};
 }
 
 /** [选项卡]  //调用成功，但建立的盒子层次要固定结构
  * @param {string } box {套着选项卡的盒子id名 }
  * @param {string } active {选项事件触发时改变的样式class名 }
  */
-function tab(boxId, active) { //参数为字符串，用引号
+function tab(boxId, active) {
+	//参数为字符串，用引号
 	var box = document.getElementById(boxId);
 	var menu = document.getElementsByTagName('ul')[0];
 	//console.log(box);
 	var aLis = menu.getElementsByTagName('li'); //通过标签名查找元素门
 	var aDivs = box.getElementsByTagName('div');
 
-	for(var i = 0; i < aLis.length; i++) {
+	for (var i = 0; i < aLis.length; i++) {
 		aLis[i].index = i; //绑定索引值，标记
-		aLis[i].onmouseout = function() { //鼠标移除清掉所有出现的菜单内容
+		aLis[i].onmouseout = function () {
+			//鼠标移除清掉所有出现的菜单内容
 			aDivs[this.index].style.display = 'none';
-		}
-		aLis[i].onmouseover = function() {
-			for(var i = 0; i < aLis.length; i++) {
+		};
+		aLis[i].onmouseover = function () {
+			for (var i = 0; i < aLis.length; i++) {
 				//清空其他，排他思想
 				aLis[i].className = '';
 				aDivs[i].style.display = 'none';
 			} //当前的
 			this.className = active;
 			aDivs[this.index].style.display = 'block';
-		}
+		};
 	}
 }
 
@@ -114,8 +115,8 @@ function tab(boxId, active) { //参数为字符串，用引号
  * @return {boolean} 返回值 { }
  */
 function arrhas(a, every) {
-	for(var i = 0; i <= a.length; i++) {
-		if(a[i] === every) {
+	for (var i = 0; i <= a.length; i++) {
+		if (a[i] === every) {
 			return true;
 		}
 	}
@@ -131,7 +132,7 @@ function randomCode(n) {
 	var str = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	var arr = str.split(''); //把内容字符串分割成数组
 	var code = ''; //定义储存验证码
-	for(var i = 0; i < n; i++) {
+	for (var i = 0; i < n; i++) {
 		var num = parseInt(Math.random() * 62);
 		code += arr[num]; //生成每位验证码并拼接
 	}
@@ -147,7 +148,7 @@ function checkCode(input, code) {
 	console.log(code);
 	var _code = new RegExp(code, 'ig'); //正则
 	var bool = input.replace(_code, 'true'); //如果输入的验证码跟随机的正则匹配，则说明验证码正确
-	if(bool === 'true') {
+	if (bool === 'true') {
 		return true;
 	} else {
 		return false;
@@ -160,8 +161,8 @@ function checkCode(input, code) {
  */
 function filtertex(tex) {
 	var str = ['妈蛋', '靠', '非暴力不合作']; //敏感词汇数组
-	if(tex) {
-		str.forEach(function(item) {
+	if (tex) {
+		str.forEach(function (item) {
 			var reg = new RegExp(item, 'ig');
 			tex = tex.replace(reg, '**');
 		});
@@ -176,7 +177,7 @@ function filtertex(tex) {
 function strToObj(str) {
 	var obj = {};
 	var arr = str.split('&'); //split把字符串切割成数组
-	for(var i in arr) {
+	for (var i in arr) {
 		var arr2 = arr[i].split('=');
 		obj[arr2[0]] = arr2[1];
 	}
@@ -189,7 +190,8 @@ function strToObj(str) {
  */
 function objToStr(obj) {
 	var str = ''; //定义空字符串存值
-	for(var key in obj) { //遍历对象，拼接字符串
+	for (var key in obj) {
+		//遍历对象，拼接字符串
 		str += key + '=' + obj[key] + '&'; //形式：age=18&score=89&,会拼多一个&;
 	}
 	str = str.slice(0, -1); //把多余的剪掉
@@ -206,30 +208,6 @@ function setdb(h) {
 	return h;
 }
 
-/**[倒计时]//调用成功
- * @param {Date} end {输入倒计时截止时间，参数为Date对象}
- * @param {String} ele {节点,倒计时不断更新渲染的节点名}
- * @param {Function} fn {回调函数，倒计时结束后页面要进行的操作}
- */
-
-function countdown(end, ele, fn) {
-	var timer = setInterval(function() {
-		var now = Date.now(); //获取当前时间
-		var setoff = parseInt((end - now) / 1000); //获取截止时间减去当前时间的秒数
-		//		console.log(setoff);//输出剩余的秒数
-		if(setoff <= 0) { //如果时间到了临界点
-			clearInterval(timer); //清除时钟
-			fn(); //执行相应的操作，如对页面样式布局的改变
-		}
-		var second = setoff % 60; //得到倒计时的各个时间元素的值
-		var minutes = parseInt(setoff / 60) % 60;
-		var hours = parseInt(setoff / 3600) % 24;
-		var day = parseInt(setoff / (3600 * 24));
-		//	console.log(day, hours, minutes, second);
-		ele.innerHTML = `${setdb(day)}天 ${setdb(hours)}:${setdb(minutes)}:${setdb(second)}`; //不断更新倒计时渲染到节点
-	}, 1000);
-}
-
 /**[不管窗口怎么改变，盒子都自动居中]//调用成功
  * @param {String} box {要居中的盒子节点}
  * @param {Function} fn {回调函数，倒计时结束后页面要进行的操作}
@@ -237,10 +215,11 @@ function countdown(end, ele, fn) {
 function centerBox(box) {
 	box.style.left = (window.innerWidth - box.offsetWidth) / 2 + 'px';
 	box.style.top = (window.innerHeight - box.offsetHeight) / 2 + 'px';
-	window.onresize = function() { //窗口改变时
+	window.onresize = function () {
+		//窗口改变时
 		box.style.left = (window.innerWidth - box.offsetWidth) / 2 + 'px';
 		box.style.top = (window.innerHeight - box.offsetHeight) / 2 + 'px';
-	}
+	};
 }
 
 /**[吸顶菜单]//调用成功
@@ -251,9 +230,9 @@ function menufixed(header, menu) {
 	var menutop = menu.offsetTop; //获取页面初始化时吸顶菜单到顶部的距离
 	console.log(menutop);
 	var menuheight = menu.offsetHeight; //获取吸顶菜单自身的高度
-	window.onscroll = function() {
+	window.onscroll = function () {
 		var scrolly = window.scrollY; //获取当前窗口滚动的距离
-		if(scrolly >= menutop) {
+		if (scrolly >= menutop) {
 			menu.style.position = 'fixed';
 			menu.style.top = 0;
 			//添加类名增加样式
@@ -262,7 +241,7 @@ function menufixed(header, menu) {
 			menu.style.position = ''; //修改回原来的样式
 			header.style.marginBottom = 0 + 'px';
 		}
-	}
+	};
 }
 
 //正则json数据
@@ -274,19 +253,19 @@ var objReg = {
 	'手机号': '/^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\\d{8}$/',
 	'出生日期': '/^\\d{4}-\\d{1,2}-\\d{1,2}$/',
 	'密码': '/.{6,18}/'
-}
 
-/**[表单验证]
- * @param {Object} arr {所有要验证的input框的名字数组} //['账号','昵称','邮箱']
- * @param {Object} eles {所有输入框类数组input}
- * @param {Object} spans {所有提示框类数组span}
- */
-function tableCheck(str, eles, spans) {
-	for(let i = 0; i < spans.length; i++) { //用let缩小作用域，就不用自定义index索引
-		eles[i].onblur = function() { //给所有input节点绑定事件
-			regCheck(str[i], eles[i].value.trim(), spans[i]);
-			//console.log(str[i]);
-		}
+	/**[表单验证]
+  * @param {Object} arr {所有要验证的input框的名字数组} //['账号','昵称','邮箱']
+  * @param {Object} eles {所有输入框类数组input}
+  * @param {Object} spans {所有提示框类数组span}
+  */
+};function tableCheck(str, eles, spans) {
+	for (var n = 0; n < spans.length; n++) {
+		//用let缩小作用域，就不用自定义index索引
+		eles[n].onblur = function () {
+			//给所有input节点绑定事件
+			regCheck(str[n], eles[n].value.trim(), spans[n]);
+		};
 	}
 }
 
@@ -296,10 +275,11 @@ function tableCheck(str, eles, spans) {
  * @param {Object} spans {当前提示框span节点}
  */
 function regCheck(str, eleval, span) {
-//	console.log(span);
-	if(objReg[str]) { //当前输入框类型的正则 存在就执行
+	//	console.log(span);
+	if (objReg[str]) {
+		//当前输入框类型的正则 存在就执行
 		var reg = new RegExp(objReg[str].slice(1, -1)); //提取正则
-		if(!span) {
+		if (!span) {
 			return reg.test(eleval);
 		} else {
 			checkTips(reg, str, eleval, span);
@@ -316,8 +296,9 @@ function regCheck(str, eleval, span) {
  * @param {Object} spans {当前提示框span节点}
  */
 function checkTips(reg, str, eleval, span) {
-	if(eleval) { //非空
-		if(reg.test(eleval)) {
+	if (eleval) {
+		//非空
+		if (reg.test(eleval)) {
 			span.innerHTML = str + '账号正确';
 		} else {
 			span.innerHTML = str + '不符合要求';
@@ -342,12 +323,11 @@ function deepClone(obj) {
  * @return {String} 返回值 {样式内容}
  */
 function getStyle(obj, name) {
-	if(getComputedStyle(obj, false)) {
+	if (getComputedStyle(obj, false)) {
 		return getComputedStyle(obj, false)[name];
 	} else {
 		return obj.currentStyle(name);
 	}
-
 }
 
 /*
@@ -356,11 +336,12 @@ function getStyle(obj, name) {
  	三个参数：设置样式
 */
 
-function css() { //设置样式：设置行内的样式
-	if(arguments.length == 2) {
+function css() {
+	//设置样式：设置行内的样式
+	if (arguments.length == 2) {
 		//获取样式
 		return arguments[0].style[arguments[1]];
-	} else if(arguments.length == 3) {
+	} else if (arguments.length == 3) {
 		arguments[0].style[arguments[1]] = arguments[2];
 	}
 }
@@ -386,20 +367,21 @@ function getId(id) {
 function startMove(obj, json, fnend) {
 
 	clearInterval(obj.timer); //防止定时器叠加
-	obj.timer = setInterval(function() {
+	obj.timer = setInterval(function () {
 
 		var istrue = true;
 
 		//1.获取属性名，获取键名：属性名->初始值
-		for(var key in json) {
+		for (var key in json) {
 			//			console.log(key); //width heigth opacity
 			var cur = 0; //存初始值
 
-			if(key == 'opacity') { //如果要修改的属性为透明度
+			if (key == 'opacity') {
+				//如果要修改的属性为透明度
 				cur = getStyle(obj, key) * 100; //获取当前透明度
-			} else { //其它属性
+			} else {
+				//其它属性
 				cur = parseInt(getStyle(obj, key)); //width heigth borderwidth 获取不带单位px的整数
-
 			}
 
 			//2.根据初始值和目标值，进行判断确定speed方向，变形：缓冲运动
@@ -407,40 +389,40 @@ function startMove(obj, json, fnend) {
 			var speed = (json[key] - cur) / 6;
 			speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed); //不要小数部分，没有这句话或晃动
 
-			if(cur != json[key]) { //如果当前属性没有达到目标值，
+			if (cur != json[key]) {
+				//如果当前属性没有达到目标值，
 				istrue = false; //开关false
 			} else {
 				istrue = true; //开关true
 			}
 
 			//3、运动
-			if(key == 'opacity') {
+			if (key == 'opacity') {
 				obj.style.opacity = (cur + speed) / 100;
 				obj.style.filter = 'alpha(opacity:' + (cur + speed) + ')';
 			} else {
 				obj.style[key] = cur + speed + 'px'; //针对普通属性 left  top height 
 			}
-
 		}
 
 		//4.回调函数:准备一个开关,确保以上json所有的属性都已经达到目标值,才能调用这个回调函数
 		//当回调函数为自身时，就会产生时间差异，达到属性的先后改变可控
-		if(istrue) { //如果为true,证明以上属性都达到目标值了
+		if (istrue) {
+			//如果为true,证明以上属性都达到目标值了
 			clearInterval(obj.timer);
-			if(fnend) { //可选参数函数存在就执行，不存在就跳过
+			if (fnend) {
+				//可选参数函数存在就执行，不存在就跳过
 				fnend();
 			}
 		}
-
 	}, 30); //obj.timer 每个对象都有自己定时器
-
 }
 
 function lunbo(box, alis, spans, spanstyle, nextBtn, prevBtn) {
 	var iW = alis[0].offsetWidth; //获取图片宽度
 	//1.所有的图片放在右侧，第一张放在可视区 
 	//console.log(iW);
-	for(var i = 0; i < alis.length; i++) {
+	for (var i = 0; i < alis.length; i++) {
 		css(alis[i], 'left', iW + 'px'); //所有图片右移动一个图片宽
 	}
 	css(alis[0], 'left', 0); //第一张放中央
@@ -463,36 +445,36 @@ function lunbo(box, alis, spans, spanstyle, nextBtn, prevBtn) {
 			'left': 0
 		}); //动态移动新图进中央
 		spanNow(); //调用焦点函数
-	}
+	};
 
 	//焦点跟随
 	var spanNow = () => {
-		for(var i = 0; i < spans.length; i++) {
+		for (var i = 0; i < spans.length; i++) {
 			spans[i].className = '';
 		}
 		spans[num].className = spanstyle;
-	}
+	};
 
 	timer = setInterval(next, 2000); //每隔两秒切换一个图片
 
 	//鼠标进入可视区，停止定时器，移开又开始自动轮播
 	box.onmouseover = () => {
 		clearInterval(timer);
-	}
+	};
 
 	box.onmouseout = () => {
 		clearInterval(timer);
 		timer = setInterval(next, 2000); //每隔两秒切换一个图片
-	}
+	};
 
 	var old = new Date();
 	nextBtn.onclick = () => {
 		//点击切换下一张
-		if(new Date() - old > 500) {
+		if (new Date() - old > 500) {
 			next();
 		}
 		old = new Date(); //新旧时间差间隔
-	}
+	};
 
 	var prev = () => {
 		//旧图动态挪到右侧
@@ -506,22 +488,21 @@ function lunbo(box, alis, spans, spanstyle, nextBtn, prevBtn) {
 			'left': 0
 		});
 		spanNow();
-	}
+	};
 
 	//点击切换上一张
 	prevBtn.onclick = () => {
 		prev();
-	}
+	};
 
-	for(var i = 0; i < spans.length; i++) {
+	for (var i = 0; i < spans.length; i++) {
 		spans[i].index = i;
-		spans[i].onclick = function() {
-			for(;;) {
+		spans[i].onclick = function () {
+			for (;;) {
 				num > this.index ? prev() : next();
-				if(num == this.index)
-					break;
+				if (num == this.index) break;
 			}
-		}
+		};
 	}
 }
 
@@ -533,7 +514,7 @@ function lunbo(box, alis, spans, spanstyle, nextBtn, prevBtn) {
  */
 function ajax(method, objurl, data, fn) {
 	var xhr = new XMLHttpRequest();
-	if(method == 'get' && data) {
+	if (method == 'get' && data) {
 		var objurl = objurl + '?' + data; //get方式拼接数据
 		xhr.open('GET', objurl, true);
 		xhr.send(null);
@@ -543,17 +524,16 @@ function ajax(method, objurl, data, fn) {
 		xhr.send(data);
 	}
 	xhr.onreadystatechange = () => {
-		if(xhr.readyState == 4) {
-			if(xhr.status == 200) {
-				if(fn) {
+		if (xhr.readyState == 4) {
+			if (xhr.status == 200) {
+				if (fn) {
 					fn(xhr.responseText);
 				}
 			} else {
 				alert('出错了' + xhr.status);
 			}
 		}
-	}
-
+	};
 }
 
 /*
@@ -571,7 +551,7 @@ function rollerDir(ele, callback) {
 	ele.onmousewheel = fn;
 
 	//火狐
-	if(ele.addEventListener) {
+	if (ele.addEventListener) {
 		ele.addEventListener('DOMMouseScroll', fn, false);
 	}
 
@@ -580,7 +560,7 @@ function rollerDir(ele, callback) {
 		var ev = ev || event;
 		//true:向上滚了，false：向下滚了
 
-		if(ev.wheelDelta) {
+		if (ev.wheelDelta) {
 			//ie 谷歌  规定：大于0 上滚，小于0下滚
 			istrue = ev.wheelDelta > 0 ? true : false;
 		} else {
@@ -613,8 +593,7 @@ function setTime(num) {
 		mins: min,
 		hours: hour,
 		days: day
-	}
-
+	};
 }
 
 /*
@@ -627,39 +606,38 @@ function setTime(num) {
  */
 
 var cookie = {
-	set: function(name, value, prop) {
+	set: function (name, value, prop) {
 		//name和value是必写参数。prop是json格式的数据
 		var str = name + '=' + value; //必写的
 		//prop
 		//expires:设置失效时间
-		if(prop.expires) {
+		if (prop.expires) {
 			str += ';expires=' + prop.expires.toUTCString(); //把时间转成字符串 toUTCString
 		}
 		//prop.path :设置路径
-		if(prop.path) {
+		if (prop.path) {
 			str += ';path=' + prop.path;
 		}
 		//设置访问权限domain
-		if(prop.domain) {
+		if (prop.domain) {
 			str += ';domain=' + prop.domain;
 		}
 
 		//设置：存
 		document.cookie = str;
-
 	},
-	get: function(key) {
+	get: function (key) {
 		//获取
 		var str = document.cookie; //name=jingjing; psw=123456
 		var arr = str.split('; '); //[name=jingjing , psw=123456]
-		for(var i = 0; i < arr.length; i++) {
+		for (var i = 0; i < arr.length; i++) {
 			var arr2 = arr[i].split('='); //[name,jingjing] [psw,123456]
-			if(key == arr2[0]) {
+			if (key == arr2[0]) {
 				return arr2[1]; //通过键名取键值
 			}
 		}
 	},
-	remove: function(key) {
+	remove: function (key) {
 		//cookie:设置时间失效，设置时间为过去的某个时间
 		var now = new Date();
 		now.setDate(now.getDate() - 7); //设置成昨天
@@ -669,4 +647,4 @@ var cookie = {
 			path: '/'
 		});
 	}
-}
+};

@@ -1,5 +1,5 @@
-jQuery($ => {
-	for(var i = 0; i < $('#lunbo_img img').length; i++) {
+$(function (){
+	for (var i = 0; i < $('#lunbo_img img').length; i++) {
 		$("<li/>").appendTo('#lunbo_point').addClass('listyle');
 	}
 	$('#lunbo_img li').eq(0).css('z-index', 2);
@@ -15,7 +15,7 @@ jQuery($ => {
 
 	function next(idx) {
 		//		console.log(idx);
-		for(var i = 0; i < $('#lunbo_img img').length; i++) {
+		for (var i = 0; i < $('#lunbo_img img').length; i++) {
 			$('#lunbo_img li').eq(i).css('z-index', 1);
 			$('#lunbo_point li').eq(i).removeClass('light');
 		}
@@ -23,36 +23,36 @@ jQuery($ => {
 		$('#lunbo_point li').eq(idx).addClass('light');
 	}
 
-	$('#lunbo').mouseover(function() {
+	$('#lunbo').mouseover(function () {
 		clearInterval(timer);
 	});
 
-	$('#lunbo').mouseout(function() {
+	$('#lunbo').mouseout(function () {
 		timer = setInterval(autoplay, 2000);
 	});
 
-	$('#lunbo_point li').on('click', function() {
+	$('#lunbo_point li').on('click', function () {
 		var i = $(this).index();
 		next(i);
 		idx = i;
 	});
 
-	$('#lunbo p').mouseover(function() {
+	$('#lunbo p').mouseover(function () {
 		$(this).parent().children('p').animate({
-			opacity : '0.5'
+			opacity: '0.5'
 		}, 500);
 	});
-	$('#lunbo p').mouseleave(function() {
+	$('#lunbo p').mouseleave(function () {
 		$(this).parent().children('p').animate({
-			opacity : '0'
+			opacity: '0'
 		}, 500);
 	});
 
-	$('#lbnext').click(function() {
+	$('#lbnext').click(function () {
 		autoplay();
 	});
 
-	$('#lbprev').click(function() {
+	$('#lbprev').click(function () {
 		console.log(idx);
 		idx = --idx < 0 ? $('#lunbo_img img').length - 1 : idx;
 		console.log(idx);

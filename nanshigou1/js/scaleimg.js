@@ -1,31 +1,31 @@
-jQuery($ => {
+$(function (){
 	var imgselfbox = $('#imgself'); //自身图片盒子
 	var scaleimg = $('#scaleimgbox img'); //放大后的图片元素
 	var imgscalebox = $('#scaleimgbox'); //放大的图片盒子
 	var scalebox = $('#scalebox'); //放大镜盒子
 
 	//鼠标移进阻止默认滚动行为
-	$('#details .detailsimgtop #imgself').mouseover(function() {
-		document.onmousewheel = function(evt) {
+	$('#details .detailsimgtop #imgself').mouseover(function () {
+		document.onmousewheel = function (evt) {
 			evt.cancelBubble = true;
 			evt.returnValue = false;
-		}
+		};
 	});
 
 	//鼠标移出隐藏盒子与进行默认滚动行为
-	$('#details .detailsimgtop #imgself').mouseleave(function() {
+	$('#details .detailsimgtop #imgself').mouseleave(function () {
 		//1.显示scalebox
 		$('#scaleimgbox').hide();
 		//2.显示scaleimgbox
 		$('#scalebox').hide();
-		document.onmousewheel = function(evt) {
+		document.onmousewheel = function (evt) {
 			evt.cancelBubble = false;
 			evt.returnValue = true;
-		}
+		};
 	});
 
 	//鼠标移进原来图片盒子就放大显示
-	$('#details .detailsimgtop #imgself').mousemove(function(e) {
+	$('#details .detailsimgtop #imgself').mousemove(function (e) {
 		//1.显示scalebox imgscalebox
 		scalebox.show();
 		imgscalebox.show();
@@ -75,7 +75,8 @@ jQuery($ => {
 		});
 	});
 
-	function resetscaleimg() {//重新设置放大图片的宽高
+	function resetscaleimg() {
+		//重新设置放大图片的宽高
 		var scalenum = scalebox.width() / imgselfbox.width();
 		scaleimg.width(parseInt(imgscalebox.width() / scalenum));
 		scaleimg.height(parseInt(imgscalebox.width() / scalenum));
@@ -89,7 +90,7 @@ jQuery($ => {
 		//判断滚轮方向
 		var ev = ev || event;
 		//true:向上滚了，false：向下滚了
-		if(ev.wheelDelta) {
+		if (ev.wheelDelta) {
 			//ie 谷歌  规定：大于0 上滚，小于0下滚
 			istrue = ev.wheelDelta > 0 ? true : false;
 		} else {
@@ -101,22 +102,23 @@ jQuery($ => {
 		//获取当前放大镜盒子的宽度
 		var scaleboxw = $('#scalebox').width();
 
-		if(istrue) { //上滚缩小放大镜盒子
+		if (istrue) {
+			//上滚缩小放大镜盒子
 			speed = 5;
-		} else { //下滚放大放大镜盒子
+		} else {
+			//下滚放大放大镜盒子
 			speed = -5;
 		}
 		scaleboxw += speed;
 		//放大镜盒子临界条件判断
 		if (scaleboxw > imgselfbox.width()) {
 			scaleboxw = imgselfbox.width();
-		} else if(scaleboxw < imgselfbox.width()/5){
-			scaleboxw = imgselfbox.width()/5;
+		} else if (scaleboxw < imgselfbox.width() / 5) {
+			scaleboxw = imgselfbox.width() / 5;
 		}
 		//		console.log(scaleboxw);
 		$('#scalebox').width(scaleboxw);
 		$('#scalebox').height(scaleboxw);
 		resetscaleimg();
 	}
-
 });

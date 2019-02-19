@@ -1,4 +1,4 @@
-jQuery($ => {
+$(function (){
 	var data = decodeURI(location.search); //获取界面的url参数 如：'?searchkey=上装'
 	var id = data.slice(9); //剪切得到商品goodid
 	var totalnum = 68; //存放当前商品数量 self
@@ -9,11 +9,11 @@ jQuery($ => {
 		type: "POST",
 		url: "../api/query.php",
 		data: "action=detalis&goodId=" + id,
-		success: function(str) {
+		success: function (str) {
 			//数据渲染
 			detailrender(str);
 		},
-		error: function(xhr) {
+		error: function (xhr) {
 			alert(xhr.responseText);
 		}
 	});
@@ -25,10 +25,11 @@ jQuery($ => {
 		//通过关键词用ajax查询数据并渲染出来
 	}
 
-	function detailrender(str) { //细节渲染函数
+	function detailrender(str) {
+		//细节渲染函数
 		var arr = JSON.parse(str);
 		num = arr.goodTotal;
-		var s = arr.map(function(item) {
+		var s = arr.map(function (item) {
 			$('#detailsimgall img').attr('src', '../img/' + item.img);
 			$('#joinnum').text(item.sellnumber);
 			$('#collectnum').text(item.sellnumber);
@@ -45,14 +46,14 @@ jQuery($ => {
 	}
 
 	//点击商品数量增加或减少
-	$('#detailsincrease').click(function() {
+	$('#detailsincrease').click(function () {
 		//获取当前的输入框的值
 		num = $('#quantity').val().trim();
 		num >= totalnum ? totalnum : num++;
 		$('#quantity').val(num);
 		//		console.log(num);
 	});
-	$('#detailsdecrease').click(function() {
+	$('#detailsdecrease').click(function () {
 		//获取当前的输入框的值
 		num = $('#quantity').val().trim();
 		num <= 1 ? 1 : num--;
@@ -60,12 +61,11 @@ jQuery($ => {
 	});
 
 	//点击加入购物车，添加订单数据
-	$('#detailsaddgoods').click(function() {
+	$('#detailsaddgoods').click(function () {
 		//获取当前的输入框的值
 		num = $('#quantity').val().trim();
 		//如果当前是登录状态
-		
-		addorders(id, num, totalnum);//添加订单进orders
-	});
 
+		addorders(id, num, totalnum); //添加订单进orders
+	});
 });
